@@ -9,16 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //by kiliococo link - https://www.youtube.com/watch?v=sHLd1BuW0aU
+    var someService: SomeService?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       
+      //  SomeService.shared.doStuff() //when singleTone
+        print("daa")
+        someService?.doStuff()
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+ 
 
 
 }

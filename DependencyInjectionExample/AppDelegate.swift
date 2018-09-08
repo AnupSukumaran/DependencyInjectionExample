@@ -15,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //MARK: have to call the dependency here and inject the depency in the viewcontroller
+        let someService = SomeService.shared
+        
+        if let firstVC = window?.rootViewController as? ViewController {
+             firstVC.someService = someService
+        }
+       
+        
         return true
     }
 
